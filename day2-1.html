@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p#aaaa.sp.box{
+            color:#333333;
+        }
+        /* #就是代表ID  ID的優先權是最高的 */
+        #aaaa{
+            color: crimson;
+        }
+        p{
+            color: seagreen;
+            font-size: 20px;
+            border:  1px solid #333333;
+            
+        }
+        /* span 是選取對象的不同所以不理會CSS的描述 但是若不設定則會繼承P的要素 */
+        span{
+            color: chartreuse;
+        }
+
+        /*  描述得越多 優先權越高*/
+        .sp.box{
+            color: blue;
+        }
+        
+
+        /* p的範圍太大 所以比較低 */
+        p.box{
+            color: blueviolet;
+        }
+
+
+
+        .sp{
+            color: sienna;
+            font-family: cursive;
+            font-size: 30px;
+            background-color: rgb(179, 252, 255);
+            font-weight: bold;
+        }
+        /* 同類則下面的優先權最高 */
+        .box{
+            color: aqua;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    </style>
+    <h1>title</h1>
+    <h2>title</h2>
+    <p class="sp box" id="aaaa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, incidunt <span>labore rem necessitatibus</span> iure repudiandae hic libero, amet ipsam temporibus culpa sapiente officia quidem eveniet iusto! Error rem voluptatem quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, incidunt labore rem necessitatibus iure repudiandae hic libero, amet ipsam temporibus culpa sapiente officia quidem eveniet iusto! Error rem voluptatem quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, incidunt labore rem necessitatibus iure repudiandae hic libero, amet ipsam temporibus culpa sapiente officia quidem eveniet iusto! Error rem voluptatem quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, incidunt labore rem necessitatibus iure repudiandae hic libero, amet ipsam temporibus culpa sapiente officia quidem eveniet iusto! Error rem voluptatem quia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, incidunt labore rem necessitatibus iure repudiandae hic libero, amet ipsam temporibus culpa sapiente officia quidem eveniet iusto! Error rem voluptatem quia.</p>
+    
+
+</body>
+</html>

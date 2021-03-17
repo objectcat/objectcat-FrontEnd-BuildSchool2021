@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 顏色後面+!important是最高優先級只有!important才能取代!important */
+        div{
+            background-color: coral!important;
+        }
+        .L1{
+            border: 5px solid #666;
+            padding: 40px;
+            background-color: cadetblue!important;
+        }
+        .L2{
+            border: 5px solid #666;
+            padding: 40px;
+            background-color: #bbb;
+        }
+        .L3{
+            border: 5px solid #666;
+            padding: 40px;
+            background-color: #333;
+        }
+        /* 抓第二層的DIV  但優先權並不高 會被蓋掉 */
+        .L1 > div> div{
+            background-color: chocolate;
+        }
+
+        /* 選取所有第一層以內的DIV  */
+        .L1 div{
+            background-color: chartreuse;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- inline Style 第二優先級第三為ID第四為class第五就是tag -->
+    <div class="L1" style="background-color: #777;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quam.
+    <div class="L2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quam.
+    <div class="L3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, quam.</div></div></div>
+
+</body>
+</html>
