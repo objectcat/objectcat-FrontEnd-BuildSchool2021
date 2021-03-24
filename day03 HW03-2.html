@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .wrap {
+            height: 90vh;
+            /* height 90 VH瀏覽器90%的畫面視窗大小 */
+            background-size: cover;
+            /* 滿版 */
+            background-image: url(https://ld-wp.template-help.com/wordpress_imperion/finance_v1/wp-content/uploads/2017/11/finance-skin-slider-3.jpg);
+            /* 背景地址 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .header {
+            height: 150px;
+            background-color: rgb(0, 0, 0, .5);
+            /* 上方導覽列 0.5透明度 */
+        }
+
+        .header img {
+            display: flex;
+            margin: auto;
+            padding: 20px;
+            /* 使圖片橫排置中 */
+
+        }
+
+        .header nav {
+            display: flex;
+            justify-content: center;
+            /* 使nav這項屬性橫排 並置中 */
+
+        }
+
+        .header nav a {
+            margin: 20px;
+            padding: 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            /* 設定內距 外距 超連結底線 文字顏色 */
+        }
+
+        .header nav :hover {
+            /* 簡單的文字換色 */
+            transition: all .3s .2s ease;
+            color: pink;
+        }
+
+        .bigtitle {
+            max-width: 1200px;
+
+            margin: 100px auto;
+        }
+
+        .bigtitle h2 {
+            color: rgb(255, 255, 255);
+            font-size: 130px;
+        }
+
+        .bigtitleSpan p {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+
+        .about {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .about .item {
+            width: 400px;
+            color: rgb(255, 255, 255);
+        }
+
+        .about .item h5 img {
+            vertical-align: middle;
+        }
+
+        .about .item p {
+            margin: 15px;
+        }
+
+        .Looking {
+            background-color: rgb(255, 255, 255);
+            max-width: 1200px;
+            height: 400px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Looking h2 {
+            width: 450px;
+            font-size: 50px;
+        }
+
+        .Looking p {
+            width: 800px;
+            padding: 15px;
+            font-size: 20px;
+            text-align: left;
+            line-height: 30px;
+        }
+
+        .Looking p:first-of-type {
+            padding: 15px;
+            border-left: 2px solid #655;
+        }
+
+        .Looking p:first-of-type::first-letter {
+            color: sandybrown;
+            font-size: 70px;
+        }
+
+        .Unleash {
+            margin: auto;
+            height: 300px;
+            background-color: wheat;
+            display: flex;
+        }
+
+        .UnleashBox {
+            max-width: 1200px;
+            margin: auto;
+            width: 1196px;
+            height: 200px;
+            display: flex;
+        }
+
+        .UnleashBoxTitle {
+            padding: 60px 15px 50px 15px;
+            width: 800px;
+
+        }
+
+        .UnleashBoxTitle h2 {
+            font-size: 40px;
+        }
+
+        .UnleashBoxTitle p {
+            font-size: 20px;
+        }
+
+        .UnleashBoxBox {
+            /* 寫在UnleashBoxTitle 後面 */
+            /* 用 margin抓長寬*/
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            /* 搗圓角 */
+        }
+
+        .UnleashBoxBoxbuttom {
+
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .UnleashBoxBoxbuttom a {
+            /*我拉一個框框所以 display比較好排 */
+            /* 把按鈕弄大所以只能寫在超連結裡面 */
+            display: flex;
+            text-decoration: none;
+            color: black;
+            padding: 50px;
+            align-items: center;
+            align-content: center;
+            font-size: 20px;
+
+        }
+
+        .UnleashBoxBoxbuttom :hover {
+            transition: all .3s .2s ease;
+            /* 全屬性 變化時間 延遲時間 變化的預設速度 */
+            background-color: pink;
+            border-radius: 10px;
+        }
+
+        .WhyTitleBox {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .WhyTitle {
+            padding: 50px 0 0 0;
+            font-size: 50px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .WhyTitle span {
+            color: rosybrown;
+
+        }
+
+        .Whyp {
+            padding: 15px 0 0 0;
+            margin: 0 25% 50px 25%;
+            line-height: 25px;
+            text-align: center;
+
+        }
+
+        .telephonebox {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+
+        }
+
+        .telephoneboxleft {
+            display: flex;
+            width: 400px;
+            justify-content: center;
+            flex-direction: column;
+            align-content: space-around;
+
+
+        }
+
+        .telephonebox1left {
+            width: 400px;
+            height: 150px;
+            display: flex;
+        }
+
+        .telephonebox1lefttxtbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .telephonebox1lefttxtboxbox h3 {
+            font-size: 25px;
+            text-align: right;
+            vertical-align: baseline;
+            color: wheat;
+        }
+
+        .telephonebox1lefttxtboxbox p {
+            font-size: 15px;
+            text-align: right;
+            vertical-align: baseline;
+        }
+
+        .telephonebox1lefttxtbox img {
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+
+
+        .telephoneboxmid {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .telephoneboxRight {
+            display: flex;
+            width: 400px;
+            justify-content: center;
+            flex-direction: column;
+            align-content: space-around;
+
+
+        }
+
+        .telephonebox1Right {
+            width: 400px;
+            height: 150px;
+            display: flex;
+        }
+
+        .telephonebox1Righttxtbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+        .telephonebox1Righttxtboxbox h3 {
+            font-size: 25px;
+            vertical-align: baseline;
+            color: wheat;
+        }
+
+        .telephonebox1Righttxtboxbox p {
+            font-size: 15px;
+            vertical-align: baseline;
+        }
+
+        .telephonebox1Righttxtbox img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            padding: 10px;
+        }
+
+        .bgfourbox {
+            width: 100%;
+            height: 500px;
+            background-image: url(http://tirmobilnyserwis.pl/wp-content/uploads/2019/07/counter-bg.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: rgb(0, 0, 0, 0.3);
+
+
+        }
+
+        .bgfourimg {
+            display: flex;
+            margin: auto;
+            max-width: 1100px;
+            width: 150px;
+            height: 300px;
+        }
+
+        .bgfourbox4 {
+            width: 100%;
+            display: inline;
+            text-align: center;
+
+        }
+
+        .bgfourbox4 h4 {
+            text-align: center;
+            font-size: 40px;
+            color: rgb(255, 255, 255);
+            padding: 25px;
+        }
+
+        .bgfourbox4 h5 {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .bgfourbox4 p {
+            text-align: center;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .what {
+            width: 100%;
+            height: 800px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatbox {
+            width: 600px;
+            height: 400px;
+
+        }
+
+        .whatbox h2 {
+            font-size: 55px;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+        }
+
+        .whatbox span {
+            font-size: 45px;
+            color: rgb(252, 189, 189);
+        }
+
+        .whatboxP p {
+            padding: 65px 0 0 0;
+            font-size: 20px;
+            line-height: 20px;
+            color: rgb(0, 0, 0, 0.5);
+        }
+
+        .whatbox li {
+            font-size: 20px;
+            padding: 25px 0 0 0;
+            list-style-type: none;
+        }
+
+        .whatboxblank {
+            width: 540px;
+            height: 80px;
+            margin: 30px;
+
+        }
+
+        .whatboxright {
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }
+
+        .whatboxright p {
+            font-size: 20px;
+            color: rosybrown;
+        }
+
+
+        .label {
+            width: 570px;
+            margin: 10px;
+        }
+
+        .Our {
+            width: 100%;
+            height: 500px;
+            background-color: rosybrown;
+        }
+
+        .Ourbox {
+            margin: auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            padding: 150px;
+        }
+
+        .Ourbox h2 {
+            font-size: 50px;
+        }
+
+        .Ourbox span {
+            color: sandybrown;
+        }
+
+        .Ourboxnav {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .Ourboxnav a {
+            text-decoration: none;
+            color: rgb(56, 56, 56);
+            margin: 20px;
+            padding: 15px;
+        }
+
+        .Clients {
+            width: 100%;
+            height: 500px;
+            background-color: rgb(109, 109, 109);
+        }
+
+        .Clientsbox {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            padding: 100px;
+        }
+
+        .Clientsbox span {
+            color: wheat;
+        }
+
+        .bottom {
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 50%;
+            background: rgb(96, 255, 255);
+            opacity: 0.6;
+        }
+
+
+
+        .perple {
+            max-width: 1200px;
+            width: 100%;
+            height: 800px;
+            margin: auto;
+            display: flex;
+        }
+
+
+        .perplebox {
+            margin: auto;
+            width: 598px;
+            height: 600px;
+
+            display: flex;
+            flex-wrap: wrap;
+            background-color: slategrey;
+        }
+
+        .perpleboxtwo {
+            width: 250px;
+            height: 250px;
+
+            margin: auto;
+
+        }
+
+        .perpleboxtwo p {
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+        }
+
+        .perpleboxtwo h2 {
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+            padding: 5px 5px 15px 5px;
+        }
+
+        .perpleboxtwo h4 {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+        }
+
+        .perpleboxthree {
+            font-size: 40px;
+            margin: 50px auto 0px auto;
+            width: 515px;
+            height: 50px;
+
+
+        }
+
+        .perpleboxthree span {
+            color: tan;
+        }
+
+        .perpleboxfour {
+
+            width: 220px;
+            height: 360px;
+            margin: 0 auto;
+
+        }
+
+        .perpleboxfour h3 {
+            padding: 15px 0 25px 0;
+            font-size: 15px;
+        }
+
+        .perpleboxfour p {
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        .Stay {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #666;
+            background-color: sienna;
+            margin: auto;
+            display: flex;
+        }
+
+        .Staybox {
+            display: flex;
+            max-width: 1200px;
+            width: 1200px;
+            height: 100px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Staybox h2 {
+            color: aliceblue;
+            font-size: 55px;
+            margin: 0 150px 0 50px;
+        }
+
+        .search-bar {
+            width: 350px;
+            background-color: #666;
+            height: 50px;
+
+        }
+
+        .search-btn {
+            width: 100px;
+            height: 50px;
+        }
+
+        .last {
+            width: 100%;
+            height: 400px;
+            margin: auto;
+        }
+
+        .lastbox {
+            margin: auto;
+            max-width: 1200px;
+            height: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .lastbox h3 {
+            padding: 10px;
+            font-size: 30px;
+        }
+
+        .lastbox p {
+            padding: 50px 0 10px 0;
+            font-size: 30px;
+
+        }
+        .lastimg{
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border-radius: 50%;
+            background: rgb(96, 255, 255);
+            opacity: 0.6;
+
+        }
+
+        .lastbox span {
+            color: brown;
+        }
+        .pon{
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <img src="https://buildschool-mike.azurewebsites.net/css.0318%E4%BD%9C%E6%A5%AD%E5%9C%96%E7%89%87/title.png"
+                alt="">
+            <nav>
+                <a href="">HOME</a>
+                <a href="">PAGES</a>
+                <a href="">FEATURES</a>
+                <a href="">NEWS</a>
+                <a href="">SHOP</a>
+            </nav>
+            <div class="bigtitle">
+                <h2>The Power</h2>
+                <div class="bigtitleSpan">
+                    <p>of IMAGINATION MAKES US INFINITE</p>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="item">
+                <h5><img src="https://buildschool-emily.azurewebsites.net/0318hw/pic/icon1.png" alt=""> DEVELOPMENT
+                </h5>
+                <p>We work alongside national and international organizations.</p>
+            </div>
+            <div class="item">
+                <h5>
+                    <img src="https://buildschool-emily.azurewebsites.net/0318hw/pic/icon1.png" alt="">
+                    INTEGRATION
+                </h5>
+                <p>We work alongside national and international organizations.</p>
+            </div>
+            <div class="item">
+                <h5>
+                    <img src="https://buildschool-emily.azurewebsites.net/0318hw/pic/icon1.png" alt="">
+                    RESPONSIBILITY
+                </h5>
+                <p>Responsible customer relations through clear communication...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Looking">
+        <h2>Looking for a First-Class Business Plan</h2>
+        <div class="LookingW"></div>
+        <p>we’re a financial and consulting business company of professional thinkers, strategists, digital
+            innovators, designers and problem solvers (everyone gets a mention). Our sense </p>
+        <p>of curiosity brings thinkers, strategists, digital innovators, designers and problem solvers (everyone
+            gets a mention). Our sense of curiosity brings brands to life, gets them talking, and makes sure they’re
+            heard above.</p>
+    </div>
+    </div>
+
+    <div class="Unleash">
+        <div class="UnleashBox">
+            <div class="UnleashBoxTitle">
+                <h2>Unleash Your Team’s Productive Power</h2>
+                <p>The truly scarce resources now are the time, the talent, and the energy of the people.</p>
+            </div>
+            <div class="UnleashBoxBox">
+                <div class="UnleashBoxBoxbuttom" ><a href="">GET IN TOUCH</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="WhyTitleBox">
+        <div class="WhyTitle">
+            <h2>Why Traders<span>Choose Us</span></h2>
+        </div>
+        <div class="Whyp">
+            <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you want
+                to make sure you’re monitoring what people are posting on social networks? Especially if the demographic
+                of your audience falls in that age range.</p>
+        </div>
+    </div>
+
+    <div class="telephonebox">
+        <div class="telephoneboxleft">
+            <div class="telephonebox1left">
+                <div class="telephonebox1lefttxtbox">
+                    <div class="telephonebox1lefttxtboxbox">
+                        <h3>VISIT</h3>
+                        <p>Our values and ideals are our decision making guide.</p>
+                    </div>
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1leftimg">
+                    </div>
+                </div>
+            </div>
+            <div class="telephonebox1left">
+                <div class="telephonebox1lefttxtbox">
+                    <div class="telephonebox1lefttxtboxbox">
+                        <h3>SAVE</h3>
+                        <p>We only release our products when we feel they meet our standards.</p>
+                    </div>
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1leftimg">
+                    </div>
+                </div>
+            </div>
+            <div class="telephonebox1left">
+                <div class="telephonebox1lefttxtbox">
+                    <div class="telephonebox1lefttxtboxbox">
+                        <h3>EXPLORE</h3>
+                        <p>We rely on the same platform and tools our customers pay us for</p>
+                    </div>
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1leftimg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="telephoneboxmid">
+            <img src="https://ld-wp.template-help.com/wordpress_imperion/finance_v1/wp-content/uploads/2017/11/imperion_finance_phone.png"
+                alt="">
+        </div>
+
+
+        <div class="telephoneboxRight">
+            <div class="telephonebox1Right">
+                <div class="telephonebox1Righttxtbox">
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1Rightimg">
+                        <div class="telephonebox1Righttxtboxbox">
+                            <h3>ORGANIZE</h3>
+                            <p>Beautiful products to help people with creative ideas succeed</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="telephonebox1Right">
+                <div class="telephonebox1Righttxtbox">
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1Rightimg">
+                        <div class="telephonebox1Righttxtboxbox">
+
+                            <h3>COMMUNICATE</h3>
+                            <p>Creative, stylish, and easy-to-manage online presence.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="telephonebox1Right">
+                <div class="telephonebox1Righttxtbox">
+                    <img src="http://placekitten.com/g/80/80" alt="">
+                    <div class="telephonebox1Rightimg">
+                        <div class="telephonebox1Righttxtboxbox">
+
+                            <h3>SHARE
+                            </h3>
+                            <p>Share stories and create an impactful online presence.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bgfourbox">
+        <div class="bgfourimg">
+            <div class="bgfourbox4">
+                <img src="http://placekitten.com/g/80/80" alt="">
+                <h4>2007</h4>
+                <h5>COMPANY</h5>
+                <p>ESTABLISHED</p>
+
+            </div>
+
+        </div>
+        <div class="bgfourimg">
+            <div class="bgfourbox4">
+                <img src="http://placekitten.com/g/80/80" alt="">
+                <h4>426</h4>
+                <h5>PROJECTS</h5>
+                <p>DONE</p>
+            </div>
+        </div>
+        <div class="bgfourimg">
+            <div class="bgfourbox4">
+                <img src="http://placekitten.com/g/80/80" alt="">
+                <h4>45+</h4>
+                <h5>BUSINESS</h5>
+                <p>PARTHNERS
+                </p>
+            </div>
+        </div>
+        <div class="bgfourimg">
+            <div class="bgfourbox4">
+                <img src="http://placekitten.com/g/80/80" alt="">
+                <h4>1510</h4>
+                <h5>HAPPY</h5>
+                <p>CLIENTS</p>
+            </div>
+        </div>
+    </div>
+    <div class="what">
+        <div class="whatbox">
+            <h2>What We<span>Are Good At</span></h2>
+            <div class="whatboxP">
+                <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you
+                    want to make sure you’re monitoring what people are posting on social networks?</p>
+            </div>
+            <li>Article and News research</li>
+            <li>Company and Industry Research</li>
+            <li>Industry Research and Market Research</li>
+            <li>Market Analysis Report</li>
+        </div>
+        <div class="whatbox">
+            <div class="whatboxblank">
+            </div>
+            <div class="whatboxright">
+                <h5>FINANCIAL SERVICES</h5>
+                <p>87%</p>
+            </div>
+            <progress class="label" id="file" max="100" value="87"> </progress>
+            <div class="whatboxright">
+                <h5>BUSINESS SERVICES
+                </h5>
+                <p>75%</p>
+            </div>
+            <progress class="label" id="file" max="100" value="75"> </progress>
+            <div class="whatboxright">
+                <h5>CONSUMER PRODUCTS</h5>
+                <p>63%</p>
+            </div>
+            <progress class="label" id="file" max="100" value="63"> </progress>
+            <div class="whatboxright">
+                <h5>ENERGY AND ENVIRONMENT</h5>
+                <p>50%</p>
+            </div>
+            <progress class="label" id="file" max="100" value="87"> </progress>
+        </div>
+    </div>
+    </div>
+    <div class="Our">
+        <div class="Ourbox">
+            <h2>Our Latest <span>Projects</span></h2>
+
+        </div>
+        <div class="Ourboxnav">
+            <nav>
+                <a href="">HOME</a>
+                <a href="">PAGES</a>
+                <a href="">FEATURES</a>
+                <a href="">NEWS</a>
+                <a href="">SHOP</a>
+            </nav>
+        </div>
+    </div>
+    <div class="Clients">
+        <div class="Clientsbox">
+            <h2>Clients <span>Testimonials</span></h2>
+
+        </div>
+        <div class="Clientsbox">
+            <div class="bottom">
+                <span></span>
+            </div>
+            <div class="bottom">
+                <span></span>
+            </div>
+            <div class="bottom">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="perple">
+        <div class="perplebox">
+            <div class="perpleboxtwo">
+                <img src="http://placekitten.com/g/250/250" alt="">
+            </div>
+            <div class="perpleboxtwo">
+                <p>CEO, OWNER</p>
+                <h2>Sarah Johnson</h2>
+                <h4>+ 800 123 45 70</h4>
+                <h4>info@imperion.com</h4>
+                <h4>sarah.johnson</h4>
+
+            </div>
+            <div class="perpleboxtwo">
+                <img src="http://placekitten.com/g/250/250" alt="">
+            </div>
+            <div class="perpleboxtwo">
+                <p>MARKETING DEPARTMEN </p>
+                <h2>Irene Doe</h2>
+                <h4>+ 800 123 45 85</h4>
+                <h4>info@imperion.com</h4>
+                <h4>irene.doe</h4>
+            </div>
+        </div>
+        <div class="perplebox" style="background-color: snow;">
+            <div class="perpleboxthree">
+                <h2>Our <span>Offices</span></h2>
+            </div>
+            <div class="perpleboxfour">
+                <h3> HEAD OFFICE#1</h3>
+                <p>4096 N Highland St, Arlington
+                    VA 32101, USA</p>
+                <p style="color: saddlebrown;">imperion@company.com</p>
+                <p style="color: saddlebrown;">800 1234 56 78</p>
+                <h3>BUSINESS HOURS</h3>
+                <p style="color: saddlebrown;">Mon-Thu: 9:30 - 21:00</p>
+                <p style="color: saddlebrown;">Mon-Thu: 9:30 - 21:00</p>
+                <p style="color: saddlebrown;">Sat: 10:00 - 15:00
+                </p>
+            </div>
+            <div class="perpleboxfour">
+                <h3>HEAD OFFICE#2</h3>
+                <p>4096 N Highland St, Arlington
+                    VA 32101, USA</p>
+                <p style="color: saddlebrown;">imperion@company.com</p>
+                <p style="color: saddlebrown;">800 1234 56 78</p>
+                <h3>BUSINESS HOURS</h3>
+                <p style="color: saddlebrown;">Mon-Thu: 9:30 - 21:00</p>
+                <p style="color: saddlebrown;">Fri: 6:00 - 21:00</p>
+                <p style="color: saddlebrown;">Sat: 10:00 - 15:00</p>
+            </div>
+        </div>
+    </div>
+    <div class="Stay">
+        <div class="Staybox">
+            <h2>Stay Always In Touch</h2>
+            <form>
+                <input class="search-bar" type="text" name="search" id="search" placeholder="輸入名稱">
+                <button class="search-btn">SUBSCRIBE</button>
+            </form>
+        </div>
+    </div>
+    <div class="last">
+        <div class="lastbox">
+            <h3>Address:4096 N Highland St, Arlington VA 32101, USA</h3>
+            <h3>Email:<span>imperion@company.com</span></h3>
+            <h3>Phone:<span>800 1234 56 78</span></h3>
+            <div class="pon"><div class="lastimg"></div><div class="lastimg"></div><div class="lastimg"></div>   <div class="lastimg"></div></div>
+            <p>© 2021 Imperion. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
